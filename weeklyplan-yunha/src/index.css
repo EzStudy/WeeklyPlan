@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header-style {
+  background-color: white;
+  color: blue;
+  margin: 10px;
+  font-family: Arial;
+  text-align: center;
+}
+.daily-box {
+  display: flex;
+  flexDirection: 'row';
+  justify-content: center;
+}
+
+.daily-box-header {
+  background-color: blueviolet;
+  border: 2px red solid;
+  font-family: Arial;
+  text-align: center;
+  width: 150px;
+  height: 40px;
+}
+
+.daily-box-body {
+  background-color: yellowgreen;
+  border: 2px red solid;
+  font-family: Arial;
+  text-align: center;
+  width: 150px;
+  height: 500px;
+}
+
+.bootstrap-datetimepicker-widget tr:hover {
+  background-color: #808080;
+}
