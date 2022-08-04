@@ -25,9 +25,14 @@ code {
   justify-content: center;
 }
 
+.datePicker {
+  box-sizing: border-box;
+}
+
 .daily-box-header {
   background-color: blueviolet;
   border: 2px red solid;
+  display: flex;
   font-family: Arial;
   text-align: center;
   width: 150px;
@@ -41,6 +46,10 @@ code {
   text-align: center;
   width: 150px;
   height: 500px;
+}
+
+.bodyDisplay{
+  display: flex;
 }
 
 .bootstrap-datetimepicker-widget tr:hover {
