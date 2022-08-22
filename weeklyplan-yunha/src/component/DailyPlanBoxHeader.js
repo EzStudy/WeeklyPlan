@@ -1,28 +1,36 @@
 import React, {useState} from "react";
 import "../index.css";
 import DailyPlanBody from "./DailyPlanBody";
+import DatePicker from "react-datepicker";
 
 export default function DailyPlanBoxHeader() {
-// export default function DailyPlanBoxHeader({day: d}) {
-    // const [isDay, setDay] = useState(d);
+    const [startDate, setStartDate] = useState(new Date());
 
     return(
-        <div className="bodyDisplay">
-            {
-                selectWeek().map( day => (
-                    <div>
-                        <div className="daily-box-header">{day}</div>
-                        <DailyPlanBody/>
-                    </div>
-                ))
-            }
-
+        <div>
+            <DatePicker
+                selected={startDate}
+                onChange={date => setStartDate(date)}
+            />
+            <div className="bodyDisplay">
+                {
+                    selectWeek(startDate).map( day => (
+                        <div>
+                            <div className="daily-box-header">{day}</div>
+                            <DailyPlanBody/>
+                        </div>
+                    ))
+                }
+            </div>
         </div>
     )
 }
 
-function selectWeek() {
+function selectWeek(startDate) {
     var currentDay = new Date();
+    if(startDate != null) {
+        currentDay = startDate;
+    }
     var theYear = currentDay.getFullYear();
     var theMonth = currentDay.getMonth();
     var theDate  = currentDay.getDate();
