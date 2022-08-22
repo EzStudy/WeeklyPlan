@@ -14,7 +14,7 @@ code {
 
 .header-style {
   background-color: white;
-  color: blue;
+  color: #fa8072;
   margin: 10px;
   font-family: Arial;
   text-align: center;
@@ -30,9 +30,8 @@ code {
 }
 
 .daily-box-header {
-  background-color: blueviolet;
-  border: 2px red solid;
-  display: flex;
+  background-color: #f2b4c0;
+  border: 2px #c39797 solid;
   font-family: Arial;
   text-align: center;
   width: 150px;
@@ -40,8 +39,8 @@ code {
 }
 
 .daily-box-body {
-  background-color: yellowgreen;
-  border: 2px red solid;
+  background-color: #eeeeee;
+  border: 2px #c39797 solid;
   font-family: Arial;
   text-align: center;
   width: 150px;
@@ -50,6 +49,7 @@ code {
 
 .bodyDisplay{
   display: flex;
+  text-align: center;
 }
 
 .bootstrap-datetimepicker-widget tr:hover {

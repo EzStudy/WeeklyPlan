@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import "../index.css";
 import DailyPlanBody from "./DailyPlanBody";
 import DatePicker from "react-datepicker";
+import { ko } from 'date-fns/esm/locale';
 
 export default function DailyPlanBoxHeader() {
     const [startDate, setStartDate] = useState(new Date());
@@ -9,9 +10,12 @@ export default function DailyPlanBoxHeader() {
     return(
         <div>
             <DatePicker
+                dateFormat="yyyy-MM-dd"
                 selected={startDate}
                 onChange={date => setStartDate(date)}
+                locale={ko}
             />
+
             <div className="bodyDisplay">
                 {
                     selectWeek(startDate).map( day => (
