@@ -6,6 +6,7 @@ import { ko } from 'date-fns/esm/locale';
 
 export default function DailyPlanBoxHeader() {
     const [startDate, setStartDate] = useState(new Date());
+    var days = ['일', '월', '화', '수', '목', '금', '토'];
 
     return(
         <div>
@@ -18,10 +19,13 @@ export default function DailyPlanBoxHeader() {
 
             <div className="bodyDisplay">
                 {
-                    selectWeek(startDate).map( day => (
+                    selectWeek(startDate).map( (day, index) => (
                         <div>
-                            <div className="daily-box-header">{day}</div>
-                            <DailyPlanBody/>
+                            <div className="daily-box-header">
+                                {day} <br/>
+                                {days[index]}
+                            </div>
+                            <DailyPlanBody day={index}/>
                         </div>
                     ))
                 }

@@ -1,7 +1,7 @@
 import React from "react";
 import "../index.css";
 
-function DailyPlanBody() {
+function DailyPlanBody(day) {
     return(
         <div>
             <div className="daily-box-body"></div>
