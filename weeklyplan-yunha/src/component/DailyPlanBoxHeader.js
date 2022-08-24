@@ -21,7 +21,7 @@ export default function DailyPlanBoxHeader() {
                 {
                     selectWeek(startDate).map( (day, index) => (
                         <div>
-                            <div className="daily-box-header">
+                            <div className="daily-box-header text-3xl font-bold underline">
                                 {day} <br/>
                                 {days[index]}
                             </div>
