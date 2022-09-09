@@ -1,57 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-.header-style {
-  background-color: white;
-  color: #fa8072;
-  margin: 10px;
-  font-family: Arial;
-  text-align: center;
-}
-.daily-box {
-  display: flex;
-  flexDirection: 'row';
-  justify-content: center;
-}
-
-.datePicker {
-  box-sizing: border-box;
-}
-
-.daily-box-header {
-  background-color: #f2b4c0;
-  border: 2px #c39797 solid;
-  font-family: Arial;
-  text-align: center;
-  width: 150px;
-  height: 40px;
-}
-
-.daily-box-body {
-  background-color: #eeeeee;
-  border: 2px #c39797 solid;
-  font-family: Arial;
-  text-align: center;
-  width: 150px;
-  height: 500px;
-}
-
-.bodyDisplay{
-  display: flex;
-  text-align: center;
-}
-
-.bootstrap-datetimepicker-widget tr:hover {
-  background-color: #808080;
 }

@@ -1,11 +1,10 @@
 import React from "react";
-import "../index.css";
 
 
 function SchedulerHeader() {
     return (
         <div>
-            <h1 className="header-style">일정 관리</h1>
+            <h1 className="header-style text-3xl font-bold underline mt-7">일정 관리</h1>
         </div>
     );
 }

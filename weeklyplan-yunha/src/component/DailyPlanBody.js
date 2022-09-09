@@ -1,9 +1,8 @@
 import React from "react";
-import "../index.css";
 
 function DailyPlanBody(day) {
     return(
-        <div>
+        <div className="border-solid border-2 h-52 md:h-64">
             <div className="daily-box-body"></div>
         </div>
     )
