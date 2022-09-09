@@ -1,6 +1,4 @@
 import SchedulerHeader from './component/SchedulerHeader';
-import './App.css';
-import './index.css'
 import React from "react";
 import DailyPlanBoxHeader from "./component/DailyPlanBoxHeader";
 
@@ -8,10 +6,10 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="flex justify-center items-center">
         <SchedulerHeader />
       </header>
-        <div className="daily-box">
+        <div>
             <DailyPlanBoxHeader/>
         </div>
     </div>
