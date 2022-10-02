@@ -1,6 +1,6 @@
 import React from "react";
 
-function DailyPlanBody(day) {
+function DailyPlanBoxBody(day) {
     return(
         <div className="border-solid border-2 h-52 md:h-64">
             <div className="daily-box-body"></div>
@@ -8,4 +8,4 @@ function DailyPlanBody(day) {
     )
 }
 
-export default DailyPlanBody;
+export default DailyPlanBoxBody;
