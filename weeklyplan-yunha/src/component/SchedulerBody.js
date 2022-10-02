@@ -1,13 +1,12 @@
 import React, {useState} from "react";
-import DailyPlanBody from "./DailyPlanBody";
 import DatePicker from "react-datepicker";
 import { ko } from 'date-fns/esm/locale';
 import "react-datepicker/dist/react-datepicker.css";
+import SchedulerBoxBody from "./SchedulerBoxBody";
 
 
-export default function DailyPlanBoxHeader() {
+export default function SchedulerBody() {
     const [startDate, setStartDate] = useState(new Date());
-    var days = ['일', '월', '화', '수', '목', '금', '토'];
 
     const DatePickerCustomInput = ({ value, onClick }) => (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -29,46 +28,7 @@ export default function DailyPlanBoxHeader() {
                     locale={ko}
                 />
             </div>
-
-            <div className="flex flex-wrap justify-center items-center">
-                {
-                    selectWeek(startDate).map( (day, index) => (
-                        <div className="mr-5 mb-3 w-4/5 md:w-1/5 border-solid border-2 hover:border-dotted">
-                            <div className="text-center">
-                                {day} <span>(</span> {days[index]} <span>)</span>
-                            </div>
-                            <DailyPlanBody day={index}/>
-                        </div>
-                    ))
-                }
-            </div>
+            <SchedulerBoxBody startDate={startDate}/>
         </div>
     )
-}
-
-function selectWeek(startDate) {
-    var currentDay = new Date();
-    if(startDate != null) {
-        currentDay = startDate;
-    }
-    var theYear = currentDay.getFullYear();
-    var theMonth = currentDay.getMonth();
-    var theDate  = currentDay.getDate();
-    var theDayOfWeek = currentDay.getDay();
-
-    var thisWeek = [];
-
-    for(var i=0; i<7; i++) {
-        var resultDay = new Date(theYear, theMonth, theDate + (i - theDayOfWeek));
-        var yyyy = resultDay.getFullYear();
-        var mm = Number(resultDay.getMonth()) + 1;
-        var dd = resultDay.getDate();
-
-        mm = String(mm).length === 1 ? '0' + mm : mm;
-        dd = String(dd).length === 1 ? '0' + dd : dd;
-
-        thisWeek[i] = yyyy + '-' + mm + '-' + dd;
-    }
-
-    return thisWeek;
 }

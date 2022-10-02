@@ -1,6 +1,6 @@
 import SchedulerHeader from './component/SchedulerHeader';
 import React from "react";
-import DailyPlanBoxHeader from "./component/DailyPlanBoxHeader";
+import SchedulerBody from "./component/SchedulerBody";
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
         <SchedulerHeader />
       </header>
         <div>
-            <DailyPlanBoxHeader/>
+            <SchedulerBody/>
         </div>
     </div>
   );
