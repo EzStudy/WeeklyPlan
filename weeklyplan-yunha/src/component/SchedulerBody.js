@@ -3,6 +3,7 @@ import DatePicker from "react-datepicker";
 import { ko } from 'date-fns/esm/locale';
 import "react-datepicker/dist/react-datepicker.css";
 import SchedulerBoxBody from "./SchedulerBoxBody";
+import CreateScheduleBoxModal from "./CreateScheduleBoxModal";
 
 
 export default function SchedulerBody() {
@@ -18,7 +19,7 @@ export default function SchedulerBody() {
 
     return(
         <div>
-            <div className="m-5">
+            <div className="m-5 flex flex-row">
                 <DatePicker
                     fixedHeight
                     dateFormat="yyyy-MM-dd"
@@ -27,6 +28,7 @@ export default function SchedulerBody() {
                     customInput={<DatePickerCustomInput />}
                     locale={ko}
                 />
+                <CreateScheduleBoxModal />
             </div>
             <SchedulerBoxBody startDate={startDate}/>
         </div>
