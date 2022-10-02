@@ -5,6 +5,11 @@ import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import { ko } from "date-fns/esm/locale";
 
+import { HiPencilAlt } from "react-icons/hi";
+import Modal from "./Modal";
+
+import firebase from './Firebase';
+
 function WeekDay(startDate){
         var currentDay = startDate;
     
@@ -42,14 +47,18 @@ function WeeklyPlanBody(){
 );
     return(
         <>
-        <DatePicker 
-            locale={ko}
-            className="DatePicker"
-            dateFormat= 'yyyy-MM-dd'
-            selected={startDate}
-            onChange={selectDate => setStartDate(selectDate)}
-            customInput={<CalendarIcon/>}
-            ></DatePicker>
+        <div className="flex flex-row">
+            <DatePicker 
+                locale={ko}
+                className="DatePicker basis-1/2"
+                dateFormat= 'yyyy-MM-dd'
+                selected={startDate}
+                onChange={selectDate => setStartDate(selectDate)}
+                customInput={<CalendarIcon/>}
+                ></DatePicker>
+            <Modal></Modal>
+        </div>
+        
         <div className="WeeklyPlanBody flex flex-wrap items-center justify-center">
             {WeekDay(startDate).map((week, index) =>(
                 <DailyPlan ymd={week} day={index} />
