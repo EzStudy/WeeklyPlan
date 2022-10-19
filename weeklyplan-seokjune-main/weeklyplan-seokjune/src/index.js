@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Appp from './Appp';
 
 import WeeklyPlan from './WeeklyPlan';
 
@@ -10,7 +11,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <WeeklyPlan />
+    <Appp />
+    {/* <WeeklyPlan /> */}
   </React.StrictMode>
 );
 

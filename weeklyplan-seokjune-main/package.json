@@ -1,0 +1,18 @@
+{
+  "name": "weeklyplan-seokjune-main",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "client": "cd weeklyplan-seokjune && npm start",
+    "server": "cd server-seokjune && node server.js",
+    "dev": "concurrently --kill-others-on fail \"yarn server\" \" yarn client\""
+  },
+  "dependencies": {
+    "body-parser":"^1.20.1",
+    "express":"^4.18.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.4.0"
+  }
+}
