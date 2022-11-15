@@ -8,10 +8,10 @@ export default function SchedulerBoxBody(props) {
 
     return(
         <div>
-            <div className="flex flex-wrap justify-center items-center">
+            <div className="flex item-stretch justify-center items-center">
                 {
                     selectWeek(props.startDate).map( (day, index) => (
-                        <div className="mr-5 mb-3 w-4/5 md:w-1/5 border-solid border-2 hover:border-dotted">
+                        <div className="w-48 border-solid border-2 hover:border-dotted">
                             <div className="text-center">
                                 {day} <span>(</span> {days[index]} <span>)</span>
                             </div>
